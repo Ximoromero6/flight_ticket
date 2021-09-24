@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <title>Flight Ticket</title>
+</head>
+
+<body>
+    <div class="container"></div>
+
+    <template id="ticket__template">
+        <div class="flight__ticket">
+            <div class="flight__information">
+                <div class="departure">
+                    <p>NYC</p>
+                    <span>New-York</span>
+                    <small>18:55</small>
+                </div>
+                <div class="time">
+                    <span class="plane">
+                        <div class="line">
+                            <img src="assets/images/air__plane.png" alt="Flying" loading="lazy">
+                        </div>
+                    </span>
+                    <p>8h 30m</p>
+                </div>
+                <div class="arrive">
+                    <p>LDN</p>
+                    <span>London</span>
+                    <small>2:35</small>
+                </div>
+            </div>
+            <div class="flight__information">
+                <div class="departure">
+                    <p>LDN</p>
+                    <span>London</span>
+                    <small>2:35</small>
+                </div>
+                <div class="time">
+                    <span class="plane">
+                        <div class="line">
+                            <img src="assets/images/air__plane.png" alt="Flying" loading="lazy">
+                        </div>
+                    </span>
+                    <p>8h 30m</p>
+                </div>
+                <div class="arrive">
+                    <p>NYC</p>
+                    <span>New-York</span>
+                    <small>18:55</small>
+                </div>
+            </div>
+            <hr class="separator">
+            <span class="boarding__pass">Boarding pass</span>
+            <img src="assets/images/bar__code.jpg" alt="" loading="lazy" class="boarding__code">
+        </div>
+    </template>
+
+    <script>
+        const cloned__node = document.getElementById("ticket__template"), container__nodes = document.querySelector(".container");
+
+        for (let index = 0; index < 5; index++) {
+            container__nodes.append(cloned__node.content.cloneNode(true));
+        }
+    </script>
+</body>
+
+</html>
